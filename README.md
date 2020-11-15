@@ -1,5 +1,7 @@
 # tl
 
+[![PkgGoDev](https://pkg.go.dev/badge/github.com/ernado/tl)](https://pkg.go.dev/github.com/ernado/tl)
+
 Package tl implements [TL](https://core.telegram.org/mtproto/TL) (Type Language) schema parser and writer.
 Inspired by [grammers](https://github.com/Lonami/grammers) parser.
 
