@@ -3,6 +3,10 @@
 Package tl implements TL (Type Language) schema parser and writer.
 Inspired by [grammers](https://github.com/Lonami/grammers) parser.
 
+```console
+go get github.com/ernado/tl
+```
+
 ## Example
 
 This program parses schema from stdin and prints all definitions with their
