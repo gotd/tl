@@ -4,3 +4,6 @@ _fuzz/*/crashers
 _fuzz/*/suppressions
 
 .idea
+
+# coverage and other outputs
+*.out

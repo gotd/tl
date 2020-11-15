@@ -22,4 +22,6 @@ fuzz-schema-coordinator:
 	go-fuzz -coordinator localhost:1105 -workdir _fuzz/schema/
 
 test:
-	go test ./...
+	@./go.test.sh
+coverage:
+	@./go.coverage.sh
