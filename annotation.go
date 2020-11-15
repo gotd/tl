@@ -7,6 +7,16 @@ import (
 	"golang.org/x/xerrors"
 )
 
+// Common values for Annotation.Name.
+const (
+	// AnnotationDescription is description of definition or class.
+	AnnotationDescription = "description"
+	// AnnotationClass is annotation for class.
+	AnnotationClass = "class"
+	// AnnotationParamDescription is annotation for parameter named "description".
+	AnnotationParamDescription = "param_description"
+)
+
 // Annotation represents an annotation comment, like //@name value.
 type Annotation struct {
 	// Name of annotation.
@@ -48,7 +58,6 @@ func singleLineAnnotations(a []Annotation) string {
 
 // parseAnnotation parses one or multiple annotations on the line.
 func parseAnnotation(line string) ([]Annotation, error) {
-	//@name The name of the option @parserValue The new parserValue of the option
 	if !strings.HasPrefix(line, "//") {
 		return nil, xerrors.New("annotation should be comment")
 	}

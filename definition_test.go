@@ -178,7 +178,6 @@ func TestDefinition(t *testing.T) {
 					t.Error("should error")
 				}
 			})
-
 		}
 	})
 }

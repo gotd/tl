@@ -60,8 +60,8 @@ func (s Schema) WriteTo(w io.Writer) (int64, error) {
 			// Describing class if not already defined.
 			if _, defined := classDefined[class.Name]; !defined {
 				b.WriteString(singleLineAnnotations([]Annotation{
-					{Name: "class", Value: class.Name},
-					{Name: "description", Value: class.Description},
+					{Name: AnnotationClass, Value: class.Name},
+					{Name: AnnotationDescription, Value: class.Description},
 				}))
 				classDefined[class.Name] = struct{}{}
 				b.WriteString("\n\n")
@@ -122,14 +122,14 @@ func Parse(reader io.Reader) (*Schema, error) {
 			if err != nil {
 				return nil, xerrors.Errorf("failed to parse line %d: %w", line, err)
 			}
-			if strings.HasPrefix(s, "//@class") {
+			if strings.HasPrefix(s, "//@"+AnnotationClass) {
 				// Handling class annotation as special case.
 				var class Class
 				for _, a := range ann {
-					if a.Name == "class" {
+					if a.Name == AnnotationClass {
 						class.Name = a.Value
 					}
-					if a.Name == "description" {
+					if a.Name == AnnotationDescription {
 						class.Description = a.Value
 					}
 				}
@@ -159,11 +159,11 @@ func Parse(reader io.Reader) (*Schema, error) {
 			paramExist[p.Name] = struct{}{}
 		}
 		for _, ann := range def.Annotations {
-			if ann.Name == "description" {
+			if ann.Name == AnnotationDescription {
 				continue
 			}
 			searchFor := ann.Name
-			if ann.Name == "param_description" {
+			if ann.Name == AnnotationParamDescription {
 				// Special case for "description" parameter name that collides
 				// with global description.
 				searchFor = "description"

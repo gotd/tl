@@ -3,7 +3,7 @@ package main
 import (
 	"bufio"
 	"bytes"
-	"crypto/md5"
+	"crypto/md5" // #nosec
 	"fmt"
 	"io/ioutil"
 	"os"
@@ -30,9 +30,9 @@ func main() {
 			if !strings.HasSuffix(text, ";") {
 				continue
 			}
-			targetName := fmt.Sprintf("testdata:%x", md5.Sum(s.Bytes()))
+			targetName := fmt.Sprintf("testdata:%x", md5.Sum(s.Bytes())) // #nosec G401
 			targetPath := filepath.Join("_fuzz", "corpus", targetName)
-			if err := ioutil.WriteFile(targetPath, []byte(strings.TrimSuffix(text, ";")), 0666); err != nil {
+			if err := ioutil.WriteFile(targetPath, []byte(strings.TrimSuffix(text, ";")), 0600); err != nil {
 				return err
 			}
 		}
