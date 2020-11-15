@@ -1,6 +1,6 @@
 # tl
 
-Package tl implements TL (Type Language) schema parser and writer.
+Package tl implements [TL](https://core.telegram.org/mtproto/TL) (Type Language) schema parser and writer.
 Inspired by [grammers](https://github.com/Lonami/grammers) parser.
 
 ```console
