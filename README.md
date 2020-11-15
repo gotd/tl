@@ -9,7 +9,7 @@ Inspired by [grammers](https://github.com/Lonami/grammers) parser.
 go get github.com/ernado/tl
 ```
 
-## Example
+## Parsing
 
 This program parses schema from stdin and prints all definitions with their
 names and types.
@@ -35,7 +35,7 @@ func main() {
 }
 ```
 
-You can use like that:
+You can use it like that:
 ```console
 $ curl -s "https://raw.githubusercontent.com/tdlib/td/master/td/generate/scheme/td_api.tl" \
     | go run github.com/ernado/tl/cmd/tl-print \
@@ -57,4 +57,50 @@ ok#d4edbe69 = Ok;
 tdlibParameters#d29c1d7b = TdlibParameters;
 
 //...
+```
+
+### Generating
+
+You can also generate `.tl` file from `tl.Schema`.
+Aby `WriteTo` result is valid input for `Parse`.
+
+```go
+package main
+
+import (
+	"os"
+
+	"github.com/ernado/tl"
+)
+
+func main() {
+	// error#9bdd8f1a code:int32 message:string = Error;
+	_, _ = tl.Schema{
+		Definitions: []tl.SchemaDefinition{
+			{
+				Category: tl.CategoryType,
+				Definition: tl.Definition{
+					Name: "error",
+					Type: tl.Type{Name: "Error"},
+					ID:   0x9bdd8f1a,
+					Params: []tl.Parameter{
+						{
+							Name: "code",
+							Type: tl.Type{Name: "int32", Bare: true},
+						},
+						{
+							Name: "message",
+							Type: tl.Type{Name: "string", Bare: true},
+						},
+					},
+				},
+			},
+		},
+	}.WriteTo(os.Stdout)
+}
+```
+
+Output
+```tl
+error#9bdd8f1a code:int32 message:string = Error;
 ```
