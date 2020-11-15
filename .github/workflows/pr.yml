@@ -5,7 +5,7 @@ on:
     tags:
       - v*
     branches:
-      - master
+      - main
   pull_request:
 jobs:
   # Check if there any dirty change for go mod tidy
