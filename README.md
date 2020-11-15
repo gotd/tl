@@ -28,7 +28,7 @@ func main() {
 }
 ```
 
-You can it like that:
+You can use like that:
 ```console
 $ curl -s "https://raw.githubusercontent.com/tdlib/td/master/td/generate/scheme/td_api.tl" \
     | go run github.com/ernado/tl/cmd/tl-print \
