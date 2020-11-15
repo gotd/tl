@@ -13,6 +13,6 @@ func main() {
 		panic(err)
 	}
 	for _, d := range schema.Definitions {
-		fmt.Printf("%s#%x = %s\n", d.Definition.Name, d.Definition.ID, d.Definition.Type)
+		fmt.Printf("%s#%x = %s;\n", d.Definition.Name, d.Definition.ID, d.Definition.Type)
 	}
 }
