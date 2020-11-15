@@ -30,11 +30,9 @@ func main() {
 			if !strings.HasSuffix(text, ";") {
 				continue
 			}
-			crc := md5.Sum(s.Bytes())// #nosec G401
-
+			crc := md5.Sum(s.Bytes()) // #nosec G401
 			targetName := fmt.Sprintf("testdata-%x", crc)
 			targetPath := filepath.Join("_fuzz", "definitions", "corpus", targetName)
-
 			if err := ioutil.WriteFile(targetPath, []byte(strings.TrimSuffix(text, ";")), 0600); err != nil {
 				return err
 			}
