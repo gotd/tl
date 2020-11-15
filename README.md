@@ -62,7 +62,7 @@ tdlibParameters#d29c1d7b = TdlibParameters;
 ### Generating
 
 You can also generate `.tl` file from `tl.Schema`.
-Aby `WriteTo` result is valid input for `Parse`.
+Any `WriteTo` result is valid input for `Parse`.
 
 ```go
 package main
