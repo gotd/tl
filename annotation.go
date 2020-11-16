@@ -43,7 +43,7 @@ func (a Annotation) String() string {
 
 // singleLineAnnotations encodes multiple annotations on single line.
 //
-// NB: newlines are not quited if present.
+// NB: newlines are not quoted if present.
 func singleLineAnnotations(a []Annotation) string {
 	var b strings.Builder
 	for i, ann := range a {
