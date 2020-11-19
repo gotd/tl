@@ -3,8 +3,6 @@ package tl
 import (
 	"fmt"
 	"strings"
-
-	"golang.org/x/xerrors"
 )
 
 // Parameter with Name and Type.
@@ -58,7 +56,7 @@ func (p Parameter) String() string {
 func (p *Parameter) Parse(s string) error {
 	if strings.HasPrefix(s, "{") {
 		if !strings.HasSuffix(s, ":Type}") {
-			return xerrors.Errorf("unexpected generic %s", s)
+			return fmt.Errorf("unexpected generic %s", s)
 		}
 		p.typeDefinition = true
 		p.Name = strings.SplitN(s[1:], ":", 2)[0]
@@ -80,12 +78,12 @@ func (p *Parameter) Parse(s string) error {
 	if pos := strings.Index(s, "?"); pos >= 0 {
 		p.Flag = &Flag{}
 		if err := p.Flag.Parse(s[:pos]); err != nil {
-			return xerrors.Errorf("failed to parse flag: %w", err)
+			return fmt.Errorf("failed to parse flag: %w", err)
 		}
 		s = s[pos+1:]
 	}
 	if err := p.Type.Parse(s); err != nil {
-		return xerrors.Errorf("failed to parse type: %w", err)
+		return fmt.Errorf("failed to parse type: %w", err)
 	}
 	return nil
 }

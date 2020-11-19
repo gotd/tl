@@ -2,10 +2,9 @@ package tl
 
 import (
 	"bufio"
+	"fmt"
 	"io"
 	"strings"
-
-	"golang.org/x/xerrors"
 )
 
 // SchemaDefinition is annotated Definition with Category.
@@ -120,7 +119,7 @@ func Parse(reader io.Reader) (*Schema, error) {
 			// Found annotation.
 			ann, err := parseAnnotation(s)
 			if err != nil {
-				return nil, xerrors.Errorf("failed to parse line %d: %w", line, err)
+				return nil, fmt.Errorf("failed to parse line %d: %w", line, err)
 			}
 			if strings.HasPrefix(s, "//@"+AnnotationClass) {
 				// Handling class annotation as special case.
@@ -150,7 +149,7 @@ func Parse(reader io.Reader) (*Schema, error) {
 		// Type definition started.
 		def.Category = category
 		if err := def.Definition.Parse(s); err != nil {
-			return nil, xerrors.Errorf("failed to parse line %d: definition: %w", line, err)
+			return nil, fmt.Errorf("failed to parse line %d: definition: %w", line, err)
 		}
 
 		// Validating annotations.
@@ -171,7 +170,7 @@ func Parse(reader io.Reader) (*Schema, error) {
 			if _, ok := paramExist[searchFor]; !ok {
 				// Probably such errors can be just skipped, but seems like it
 				// is OK to consider this as hard failure.
-				return nil, xerrors.Errorf("failed to parse line %d: "+
+				return nil, fmt.Errorf("failed to parse line %d: "+
 					"can't find param for annotation %q", line, ann.Name)
 			}
 		}
@@ -180,7 +179,7 @@ func Parse(reader io.Reader) (*Schema, error) {
 		def = SchemaDefinition{} // reset definition
 	}
 	if err := scanner.Err(); err != nil {
-		return nil, xerrors.Errorf("failed to scan: %w", err)
+		return nil, fmt.Errorf("failed to scan: %w", err)
 	}
 
 	// Remaining type.

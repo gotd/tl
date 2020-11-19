@@ -1,10 +1,10 @@
 package tl
 
 import (
+	"errors"
+	"fmt"
 	"strings"
 	"unicode"
-
-	"golang.org/x/xerrors"
 )
 
 // Common values for Annotation.Name.
@@ -59,14 +59,14 @@ func singleLineAnnotations(a []Annotation) string {
 // parseAnnotation parses one or multiple annotations on the line.
 func parseAnnotation(line string) ([]Annotation, error) {
 	if !strings.HasPrefix(line, "//") {
-		return nil, xerrors.New("annotation should be comment")
+		return nil, errors.New("annotation should be comment")
 	}
 	line = strings.TrimSpace(strings.TrimLeft(line, "/"))
 	if line == "" {
-		return nil, xerrors.New("blank comment")
+		return nil, errors.New("blank comment")
 	}
 	if !strings.HasPrefix(line, "@") {
-		return nil, xerrors.New("invalid annotation start")
+		return nil, errors.New("invalid annotation start")
 	}
 
 	// Probably this can be simplified.
@@ -74,11 +74,11 @@ func parseAnnotation(line string) ([]Annotation, error) {
 	for line != "" {
 		nameEnd := strings.Index(line, " ")
 		if nameEnd <= 1 {
-			return nil, xerrors.New("failed to find name end")
+			return nil, errors.New("failed to find name end")
 		}
 		name := line[1:nameEnd]
 		if !isValidName(name) {
-			return nil, xerrors.New("invalid annotation name")
+			return nil, errors.New("invalid annotation name")
 		}
 
 		line = line[nameEnd:]
@@ -87,7 +87,7 @@ func parseAnnotation(line string) ([]Annotation, error) {
 			// No more annotations.
 			value := strings.TrimSpace(line)
 			if !isValidAnnotationValue(value) {
-				return nil, xerrors.Errorf("invalid annotation value %q", value)
+				return nil, fmt.Errorf("invalid annotation value %q", value)
 			}
 			annotations = append(annotations, Annotation{
 				Name:  name,
@@ -99,7 +99,7 @@ func parseAnnotation(line string) ([]Annotation, error) {
 		// There will be more.
 		value := strings.TrimSpace(line[:nextAnnotationPos])
 		if !isValidAnnotationValue(value) {
-			return nil, xerrors.Errorf("invalid annotation value %q", value)
+			return nil, fmt.Errorf("invalid annotation value %q", value)
 		}
 		annotations = append(annotations, Annotation{
 			Name:  name,

@@ -1,13 +1,12 @@
 package tl
 
 import (
+	"errors"
 	"fmt"
 	"hash/crc32"
 	"strconv"
 	"strings"
 	"unicode"
-
-	"golang.org/x/xerrors"
 )
 
 // Definition represents "Type Language" definition.
@@ -52,7 +51,7 @@ func (d *Definition) Parse(line string) error {
 	line = strings.TrimRight(line, ";")
 	parts := strings.Split(line, "=")
 	if len(parts) != 2 {
-		return xerrors.New("unexpected definition elements")
+		return errors.New("unexpected definition elements")
 	}
 	// Splitting definition line into left and right parts.
 	// Example: `foo#123 code:int name:string = Message`
@@ -63,10 +62,10 @@ func (d *Definition) Parse(line string) error {
 		leftParts = strings.Split(left, " ")
 	)
 	if left == "" || right == "" {
-		return xerrors.New("definition part is blank")
+		return errors.New("definition part is blank")
 	}
 	if err := d.Type.Parse(right); err != nil {
-		return xerrors.Errorf("failed to parse type: %w", err)
+		return fmt.Errorf("failed to parse type: %w", err)
 	}
 	{
 		// Parsing definition name and id.
@@ -74,14 +73,14 @@ func (d *Definition) Parse(line string) error {
 		nameParts := strings.SplitN(first, tokID, 2)
 		d.Name = nameParts[0]
 		if d.Name == "" {
-			return xerrors.New("blank name")
+			return errors.New("blank name")
 		}
 		if len(nameParts) > 1 {
 			// Parsing definition id as hex to uint32.
 			idHex := nameParts[1]
 			id, err := strconv.ParseUint(idHex, 16, 32)
 			if err != nil {
-				return xerrors.Errorf("%s is invalid id: %w", idHex, err)
+				return fmt.Errorf("%s is invalid id: %w", idHex, err)
 			}
 			d.ID = uint32(id)
 		} else {
@@ -95,7 +94,7 @@ func (d *Definition) Parse(line string) error {
 		}
 		for _, ns := range d.Namespace {
 			if !isValidName(ns) {
-				return xerrors.Errorf("invalid namespace part %q", ns)
+				return fmt.Errorf("invalid namespace part %q", ns)
 			}
 		}
 	}
@@ -109,7 +108,7 @@ func (d *Definition) Parse(line string) error {
 		}
 		var param Parameter
 		if err := param.Parse(f); err != nil {
-			return xerrors.Errorf("failed to parse param: %w", err)
+			return fmt.Errorf("failed to parse param: %w", err)
 		}
 		// Handling generics.
 		// Example:
@@ -125,13 +124,13 @@ func (d *Definition) Parse(line string) error {
 		// E.g. `t#1 {Y:Type} x:!X = X;` is invalid, because X was not defined.
 		if param.Type.GenericRef {
 			if _, ok := genericParams[param.Type.Name]; !ok {
-				return xerrors.Errorf("undefined generic parameter type %s", param.Type.Name)
+				return fmt.Errorf("undefined generic parameter type %s", param.Type.Name)
 			}
 		}
 		d.Params = append(d.Params, param)
 	}
 	if !isValidName(d.Name) {
-		return xerrors.Errorf("invalid name %q", d.Name)
+		return fmt.Errorf("invalid name %q", d.Name)
 	}
 	return nil
 }

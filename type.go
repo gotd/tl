@@ -1,10 +1,9 @@
 package tl
 
 import (
+	"errors"
 	"fmt"
 	"strings"
-
-	"golang.org/x/xerrors"
 )
 
 // Type of a Definition or a Parameter.
@@ -36,7 +35,7 @@ func (p Type) String() string {
 
 func (p *Type) Parse(s string) error {
 	if strings.HasPrefix(s, ".") {
-		return xerrors.New("type can't start with dot")
+		return errors.New("type can't start with dot")
 	}
 	if strings.HasPrefix(s, "!") {
 		p.GenericRef = true
@@ -46,11 +45,11 @@ func (p *Type) Parse(s string) error {
 	// Parse `type<generic_arg>`.
 	if pos := strings.Index(s, "<"); pos >= 0 {
 		if !strings.HasSuffix(s, ">") {
-			return xerrors.New("invalid generic")
+			return errors.New("invalid generic")
 		}
 		p.GenericArg = &Type{}
 		if err := p.GenericArg.Parse(s[pos+1 : len(s)-1]); err != nil {
-			return xerrors.Errorf("failed to parse generic: %w", err)
+			return fmt.Errorf("failed to parse generic: %w", err)
 		}
 		s = s[:pos]
 	}
@@ -64,14 +63,14 @@ func (p *Type) Parse(s string) error {
 		p.Namespace = ns[:len(ns)-1]
 	}
 	if p.Name == "" {
-		return xerrors.New("blank name")
+		return errors.New("blank name")
 	}
 	if !isValidName(p.Name) {
-		return xerrors.Errorf("invalid name %q", p.Name)
+		return fmt.Errorf("invalid name %q", p.Name)
 	}
 	for _, ns := range p.Namespace {
 		if !isValidName(ns) {
-			return xerrors.Errorf("invalid namespace part %q", ns)
+			return fmt.Errorf("invalid namespace part %q", ns)
 		}
 	}
 
