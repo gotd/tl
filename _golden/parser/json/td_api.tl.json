@@ -601,7 +601,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "textEntity"
+                "name": "textEntity",
+                "bare": true
               }
             }
           }
@@ -644,7 +645,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "textEntity"
+                "name": "textEntity",
+                "bare": true
               }
             }
           }
@@ -681,7 +683,8 @@
           {
             "name": "text",
             "type": {
-              "name": "formattedText"
+              "name": "formattedText",
+              "bare": true
             }
           },
           {
@@ -782,7 +785,8 @@
           {
             "name": "code_info",
             "type": {
-              "name": "authenticationCodeInfo"
+              "name": "authenticationCodeInfo",
+              "bare": true
             }
           }
         ],
@@ -839,7 +843,8 @@
           {
             "name": "terms_of_service",
             "type": {
-              "name": "termsOfService"
+              "name": "termsOfService",
+              "bare": true
             }
           }
         ],
@@ -1022,7 +1027,8 @@
           {
             "name": "recovery_email_address_code_info",
             "type": {
-              "name": "emailAddressAuthenticationCodeInfo"
+              "name": "emailAddressAuthenticationCodeInfo",
+              "bare": true
             }
           }
         ],
@@ -1328,13 +1334,15 @@
           {
             "name": "local",
             "type": {
-              "name": "localFile"
+              "name": "localFile",
+              "bare": true
             }
           },
           {
             "name": "remote",
             "type": {
-              "name": "remoteFile"
+              "name": "remoteFile",
+              "bare": true
             }
           }
         ],
@@ -2020,7 +2028,8 @@
           {
             "name": "explanation",
             "type": {
-              "name": "formattedText"
+              "name": "formattedText",
+              "bare": true
             }
           }
         ],
@@ -2367,7 +2376,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "photoSize"
+                "name": "photoSize",
+                "bare": true
               }
             }
           }
@@ -2468,7 +2478,8 @@
           {
             "name": "mask_position",
             "type": {
-              "name": "maskPosition"
+              "name": "maskPosition",
+              "bare": true
             }
           },
           {
@@ -3024,7 +3035,8 @@
           {
             "name": "text",
             "type": {
-              "name": "formattedText"
+              "name": "formattedText",
+              "bare": true
             }
           },
           {
@@ -3126,7 +3138,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "pollOption"
+                "name": "pollOption",
+                "bare": true
               }
             }
           },
@@ -3487,7 +3500,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "botCommand"
+                "name": "botCommand",
+                "bare": true
               }
             }
           }
@@ -3647,14 +3661,16 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "photoSize"
+                "name": "photoSize",
+                "bare": true
               }
             }
           },
           {
             "name": "animation",
             "type": {
-              "name": "animatedChatPhoto"
+              "name": "animatedChatPhoto",
+              "bare": true
             }
           }
         ],
@@ -3696,7 +3712,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "chatPhoto"
+                "name": "chatPhoto",
+                "bare": true
               }
             }
           }
@@ -3922,7 +3939,8 @@
           {
             "name": "profile_photo",
             "type": {
-              "name": "profilePhoto"
+              "name": "profilePhoto",
+              "bare": true
             }
           },
           {
@@ -4042,7 +4060,8 @@
           {
             "name": "photo",
             "type": {
-              "name": "chatPhoto"
+              "name": "chatPhoto",
+              "bare": true
             }
           },
           {
@@ -4099,7 +4118,8 @@
           {
             "name": "bot_info",
             "type": {
-              "name": "botInfo"
+              "name": "botInfo",
+              "bare": true
             }
           }
         ],
@@ -4224,7 +4244,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "chatAdministrator"
+                "name": "chatAdministrator",
+                "bare": true
               }
             }
           }
@@ -4566,7 +4587,8 @@
           {
             "name": "permissions",
             "type": {
-              "name": "chatPermissions"
+              "name": "chatPermissions",
+              "bare": true
             }
           }
         ],
@@ -4682,7 +4704,8 @@
           {
             "name": "bot_info",
             "type": {
-              "name": "botInfo"
+              "name": "botInfo",
+              "bare": true
             }
           }
         ],
@@ -4724,7 +4747,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "chatMember"
+                "name": "chatMember",
+                "bare": true
               }
             }
           }
@@ -5169,7 +5193,8 @@
           {
             "name": "photo",
             "type": {
-              "name": "chatPhoto"
+              "name": "chatPhoto",
+              "bare": true
             }
           },
           {
@@ -5192,7 +5217,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "chatMember"
+                "name": "chatMember",
+                "bare": true
               }
             }
           },
@@ -5457,7 +5483,8 @@
           {
             "name": "photo",
             "type": {
-              "name": "chatPhoto"
+              "name": "chatPhoto",
+              "bare": true
             }
           },
           {
@@ -5562,7 +5589,8 @@
           {
             "name": "location",
             "type": {
-              "name": "chatLocation"
+              "name": "chatLocation",
+              "bare": true
             }
           },
           {
@@ -6172,7 +6200,8 @@
           {
             "name": "reply_info",
             "type": {
-              "name": "messageReplyInfo"
+              "name": "messageReplyInfo",
+              "bare": true
             }
           }
         ],
@@ -6499,13 +6528,15 @@
           {
             "name": "forward_info",
             "type": {
-              "name": "messageForwardInfo"
+              "name": "messageForwardInfo",
+              "bare": true
             }
           },
           {
             "name": "interaction_info",
             "type": {
-              "name": "messageInteractionInfo"
+              "name": "messageInteractionInfo",
+              "bare": true
             }
           },
           {
@@ -7352,7 +7383,8 @@
           {
             "name": "filter",
             "type": {
-              "name": "chatFilter"
+              "name": "chatFilter",
+              "bare": true
             }
           },
           {
@@ -7390,7 +7422,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "recommendedChatFilter"
+                "name": "recommendedChatFilter",
+                "bare": true
               }
             }
           }
@@ -7735,13 +7768,15 @@
           {
             "name": "photo",
             "type": {
-              "name": "chatPhotoInfo"
+              "name": "chatPhotoInfo",
+              "bare": true
             }
           },
           {
             "name": "permissions",
             "type": {
-              "name": "chatPermissions"
+              "name": "chatPermissions",
+              "bare": true
             }
           },
           {
@@ -7757,7 +7792,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "chatPosition"
+                "name": "chatPosition",
+                "bare": true
               }
             }
           },
@@ -7834,7 +7870,8 @@
           {
             "name": "notification_settings",
             "type": {
-              "name": "chatNotificationSettings"
+              "name": "chatNotificationSettings",
+              "bare": true
             }
           },
           {
@@ -7853,7 +7890,8 @@
           {
             "name": "draft_message",
             "type": {
-              "name": "draftMessage"
+              "name": "draftMessage",
+              "bare": true
             }
           },
           {
@@ -7979,7 +8017,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "chatNearby"
+                "name": "chatNearby",
+                "bare": true
               }
             }
           },
@@ -7989,7 +8028,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "chatNearby"
+                "name": "chatNearby",
+                "bare": true
               }
             }
           }
@@ -8102,7 +8142,8 @@
           {
             "name": "photo",
             "type": {
-              "name": "chatPhotoInfo"
+              "name": "chatPhotoInfo",
+              "bare": true
             }
           },
           {
@@ -8748,7 +8789,8 @@
                 "name": "vector",
                 "bare": true,
                 "generic_arg": {
-                  "name": "keyboardButton"
+                  "name": "keyboardButton",
+                  "bare": true
                 }
               }
             }
@@ -8802,7 +8844,8 @@
                 "name": "vector",
                 "bare": true,
                 "generic_arg": {
-                  "name": "inlineKeyboardButton"
+                  "name": "inlineKeyboardButton",
+                  "bare": true
                 }
               }
             }
@@ -8962,7 +9005,8 @@
           {
             "name": "reply_info",
             "type": {
-              "name": "messageReplyInfo"
+              "name": "messageReplyInfo",
+              "bare": true
             }
           },
           {
@@ -8979,7 +9023,8 @@
           {
             "name": "draft_message",
             "type": {
-              "name": "draftMessage"
+              "name": "draftMessage",
+              "bare": true
             }
           }
         ],
@@ -10261,7 +10306,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "pageBlockListItem"
+                "name": "pageBlockListItem",
+                "bare": true
               }
             }
           }
@@ -10381,7 +10427,8 @@
           {
             "name": "caption",
             "type": {
-              "name": "pageBlockCaption"
+              "name": "pageBlockCaption",
+              "bare": true
             }
           },
           {
@@ -10426,7 +10473,8 @@
           {
             "name": "caption",
             "type": {
-              "name": "pageBlockCaption"
+              "name": "pageBlockCaption",
+              "bare": true
             }
           }
         ],
@@ -10469,7 +10517,8 @@
           {
             "name": "caption",
             "type": {
-              "name": "pageBlockCaption"
+              "name": "pageBlockCaption",
+              "bare": true
             }
           },
           {
@@ -10523,7 +10572,8 @@
           {
             "name": "caption",
             "type": {
-              "name": "pageBlockCaption"
+              "name": "pageBlockCaption",
+              "bare": true
             }
           },
           {
@@ -10567,13 +10617,15 @@
           {
             "name": "voice_note",
             "type": {
-              "name": "voiceNote"
+              "name": "voiceNote",
+              "bare": true
             }
           },
           {
             "name": "caption",
             "type": {
-              "name": "pageBlockCaption"
+              "name": "pageBlockCaption",
+              "bare": true
             }
           }
         ],
@@ -10692,7 +10744,8 @@
           {
             "name": "caption",
             "type": {
-              "name": "pageBlockCaption"
+              "name": "pageBlockCaption",
+              "bare": true
             }
           },
           {
@@ -10790,7 +10843,8 @@
           {
             "name": "caption",
             "type": {
-              "name": "pageBlockCaption"
+              "name": "pageBlockCaption",
+              "bare": true
             }
           }
         ],
@@ -10832,7 +10886,8 @@
           {
             "name": "caption",
             "type": {
-              "name": "pageBlockCaption"
+              "name": "pageBlockCaption",
+              "bare": true
             }
           }
         ],
@@ -10874,7 +10929,8 @@
           {
             "name": "caption",
             "type": {
-              "name": "pageBlockCaption"
+              "name": "pageBlockCaption",
+              "bare": true
             }
           }
         ],
@@ -10917,7 +10973,8 @@
           {
             "name": "photo",
             "type": {
-              "name": "chatPhotoInfo"
+              "name": "chatPhotoInfo",
+              "bare": true
             }
           },
           {
@@ -10976,7 +11033,8 @@
                 "name": "vector",
                 "bare": true,
                 "generic_arg": {
-                  "name": "pageBlockTableCell"
+                  "name": "pageBlockTableCell",
+                  "bare": true
                 }
               }
             }
@@ -11083,7 +11141,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "pageBlockRelatedArticle"
+                "name": "pageBlockRelatedArticle",
+                "bare": true
               }
             }
           }
@@ -11156,7 +11215,8 @@
           {
             "name": "caption",
             "type": {
-              "name": "pageBlockCaption"
+              "name": "pageBlockCaption",
+              "bare": true
             }
           }
         ],
@@ -11373,7 +11433,8 @@
           {
             "name": "description",
             "type": {
-              "name": "formattedText"
+              "name": "formattedText",
+              "bare": true
             }
           },
           {
@@ -11463,13 +11524,15 @@
           {
             "name": "video_note",
             "type": {
-              "name": "videoNote"
+              "name": "videoNote",
+              "bare": true
             }
           },
           {
             "name": "voice_note",
             "type": {
-              "name": "voiceNote"
+              "name": "voiceNote",
+              "bare": true
             }
           },
           {
@@ -11583,7 +11646,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "countryInfo"
+                "name": "countryInfo",
+                "bare": true
               }
             }
           }
@@ -11620,7 +11684,8 @@
           {
             "name": "country",
             "type": {
-              "name": "countryInfo"
+              "name": "countryInfo",
+              "bare": true
             }
           },
           {
@@ -11716,7 +11781,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "bankCardActionOpenUrl"
+                "name": "bankCardActionOpenUrl",
+                "bare": true
               }
             }
           }
@@ -11915,7 +11981,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "labeledPricePart"
+                "name": "labeledPricePart",
+                "bare": true
               }
             }
           },
@@ -12079,7 +12146,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "labeledPricePart"
+                "name": "labeledPricePart",
+                "bare": true
               }
             }
           }
@@ -12371,19 +12439,22 @@
           {
             "name": "payments_provider",
             "type": {
-              "name": "paymentsProviderStripe"
+              "name": "paymentsProviderStripe",
+              "bare": true
             }
           },
           {
             "name": "saved_order_info",
             "type": {
-              "name": "orderInfo"
+              "name": "orderInfo",
+              "bare": true
             }
           },
           {
             "name": "saved_credentials",
             "type": {
-              "name": "savedCredentials"
+              "name": "savedCredentials",
+              "bare": true
             }
           },
           {
@@ -12437,7 +12508,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "shippingOption"
+                "name": "shippingOption",
+                "bare": true
               }
             }
           }
@@ -12546,13 +12618,15 @@
           {
             "name": "order_info",
             "type": {
-              "name": "orderInfo"
+              "name": "orderInfo",
+              "bare": true
             }
           },
           {
             "name": "shipping_option",
             "type": {
-              "name": "shippingOption"
+              "name": "shippingOption",
+              "bare": true
             }
           },
           {
@@ -13048,19 +13122,22 @@
           {
             "name": "front_side",
             "type": {
-              "name": "datedFile"
+              "name": "datedFile",
+              "bare": true
             }
           },
           {
             "name": "reverse_side",
             "type": {
-              "name": "datedFile"
+              "name": "datedFile",
+              "bare": true
             }
           },
           {
             "name": "selfie",
             "type": {
-              "name": "datedFile"
+              "name": "datedFile",
+              "bare": true
             }
           },
           {
@@ -13069,7 +13146,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "datedFile"
+                "name": "datedFile",
+                "bare": true
               }
             }
           }
@@ -13189,7 +13267,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "datedFile"
+                "name": "datedFile",
+                "bare": true
               }
             }
           },
@@ -13199,7 +13278,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "datedFile"
+                "name": "datedFile",
+                "bare": true
               }
             }
           }
@@ -13274,7 +13354,8 @@
           {
             "name": "personal_details",
             "type": {
-              "name": "personalDetails"
+              "name": "personalDetails",
+              "bare": true
             }
           }
         ],
@@ -13302,7 +13383,8 @@
           {
             "name": "passport",
             "type": {
-              "name": "identityDocument"
+              "name": "identityDocument",
+              "bare": true
             }
           }
         ],
@@ -13330,7 +13412,8 @@
           {
             "name": "driver_license",
             "type": {
-              "name": "identityDocument"
+              "name": "identityDocument",
+              "bare": true
             }
           }
         ],
@@ -13358,7 +13441,8 @@
           {
             "name": "identity_card",
             "type": {
-              "name": "identityDocument"
+              "name": "identityDocument",
+              "bare": true
             }
           }
         ],
@@ -13386,7 +13470,8 @@
           {
             "name": "internal_passport",
             "type": {
-              "name": "identityDocument"
+              "name": "identityDocument",
+              "bare": true
             }
           }
         ],
@@ -13443,7 +13528,8 @@
           {
             "name": "utility_bill",
             "type": {
-              "name": "personalDocument"
+              "name": "personalDocument",
+              "bare": true
             }
           }
         ],
@@ -13471,7 +13557,8 @@
           {
             "name": "bank_statement",
             "type": {
-              "name": "personalDocument"
+              "name": "personalDocument",
+              "bare": true
             }
           }
         ],
@@ -13499,7 +13586,8 @@
           {
             "name": "rental_agreement",
             "type": {
-              "name": "personalDocument"
+              "name": "personalDocument",
+              "bare": true
             }
           }
         ],
@@ -13527,7 +13615,8 @@
           {
             "name": "passport_registration",
             "type": {
-              "name": "personalDocument"
+              "name": "personalDocument",
+              "bare": true
             }
           }
         ],
@@ -13555,7 +13644,8 @@
           {
             "name": "temporary_registration",
             "type": {
-              "name": "personalDocument"
+              "name": "personalDocument",
+              "bare": true
             }
           }
         ],
@@ -13641,7 +13731,8 @@
           {
             "name": "personal_details",
             "type": {
-              "name": "personalDetails"
+              "name": "personalDetails",
+              "bare": true
             }
           }
         ],
@@ -13669,7 +13760,8 @@
           {
             "name": "passport",
             "type": {
-              "name": "inputIdentityDocument"
+              "name": "inputIdentityDocument",
+              "bare": true
             }
           }
         ],
@@ -13697,7 +13789,8 @@
           {
             "name": "driver_license",
             "type": {
-              "name": "inputIdentityDocument"
+              "name": "inputIdentityDocument",
+              "bare": true
             }
           }
         ],
@@ -13725,7 +13818,8 @@
           {
             "name": "identity_card",
             "type": {
-              "name": "inputIdentityDocument"
+              "name": "inputIdentityDocument",
+              "bare": true
             }
           }
         ],
@@ -13753,7 +13847,8 @@
           {
             "name": "internal_passport",
             "type": {
-              "name": "inputIdentityDocument"
+              "name": "inputIdentityDocument",
+              "bare": true
             }
           }
         ],
@@ -13810,7 +13905,8 @@
           {
             "name": "utility_bill",
             "type": {
-              "name": "inputPersonalDocument"
+              "name": "inputPersonalDocument",
+              "bare": true
             }
           }
         ],
@@ -13838,7 +13934,8 @@
           {
             "name": "bank_statement",
             "type": {
-              "name": "inputPersonalDocument"
+              "name": "inputPersonalDocument",
+              "bare": true
             }
           }
         ],
@@ -13866,7 +13963,8 @@
           {
             "name": "rental_agreement",
             "type": {
-              "name": "inputPersonalDocument"
+              "name": "inputPersonalDocument",
+              "bare": true
             }
           }
         ],
@@ -13894,7 +13992,8 @@
           {
             "name": "passport_registration",
             "type": {
-              "name": "inputPersonalDocument"
+              "name": "inputPersonalDocument",
+              "bare": true
             }
           }
         ],
@@ -13922,7 +14021,8 @@
           {
             "name": "temporary_registration",
             "type": {
-              "name": "inputPersonalDocument"
+              "name": "inputPersonalDocument",
+              "bare": true
             }
           }
         ],
@@ -14333,7 +14433,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "passportSuitableElement"
+                "name": "passportSuitableElement",
+                "bare": true
               }
             }
           }
@@ -14380,7 +14481,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "passportRequiredElement"
+                "name": "passportRequiredElement",
+                "bare": true
               }
             }
           },
@@ -14433,7 +14535,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "passportElementError"
+                "name": "passportElementError",
+                "bare": true
               }
             }
           }
@@ -14558,19 +14661,22 @@
           {
             "name": "front_side",
             "type": {
-              "name": "datedFile"
+              "name": "datedFile",
+              "bare": true
             }
           },
           {
             "name": "reverse_side",
             "type": {
-              "name": "datedFile"
+              "name": "datedFile",
+              "bare": true
             }
           },
           {
             "name": "selfie",
             "type": {
-              "name": "datedFile"
+              "name": "datedFile",
+              "bare": true
             }
           },
           {
@@ -14579,7 +14685,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "datedFile"
+                "name": "datedFile",
+                "bare": true
               }
             }
           },
@@ -14589,7 +14696,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "datedFile"
+                "name": "datedFile",
+                "bare": true
               }
             }
           },
@@ -14965,13 +15073,15 @@
           {
             "name": "text",
             "type": {
-              "name": "formattedText"
+              "name": "formattedText",
+              "bare": true
             }
           },
           {
             "name": "web_page",
             "type": {
-              "name": "webPage"
+              "name": "webPage",
+              "bare": true
             }
           }
         ],
@@ -15014,7 +15124,8 @@
           {
             "name": "caption",
             "type": {
-              "name": "formattedText"
+              "name": "formattedText",
+              "bare": true
             }
           },
           {
@@ -15059,7 +15170,8 @@
           {
             "name": "caption",
             "type": {
-              "name": "formattedText"
+              "name": "formattedText",
+              "bare": true
             }
           }
         ],
@@ -15098,7 +15210,8 @@
           {
             "name": "caption",
             "type": {
-              "name": "formattedText"
+              "name": "formattedText",
+              "bare": true
             }
           }
         ],
@@ -15141,7 +15254,8 @@
           {
             "name": "caption",
             "type": {
-              "name": "formattedText"
+              "name": "formattedText",
+              "bare": true
             }
           },
           {
@@ -15235,7 +15349,8 @@
           {
             "name": "caption",
             "type": {
-              "name": "formattedText"
+              "name": "formattedText",
+              "bare": true
             }
           },
           {
@@ -15293,7 +15408,8 @@
           {
             "name": "video_note",
             "type": {
-              "name": "videoNote"
+              "name": "videoNote",
+              "bare": true
             }
           },
           {
@@ -15341,13 +15457,15 @@
           {
             "name": "voice_note",
             "type": {
-              "name": "voiceNote"
+              "name": "voiceNote",
+              "bare": true
             }
           },
           {
             "name": "caption",
             "type": {
-              "name": "formattedText"
+              "name": "formattedText",
+              "bare": true
             }
           },
           {
@@ -15907,7 +16025,8 @@
           {
             "name": "photo",
             "type": {
-              "name": "chatPhoto"
+              "name": "chatPhoto",
+              "bare": true
             }
           }
         ],
@@ -16366,7 +16485,8 @@
           {
             "name": "order_info",
             "type": {
-              "name": "orderInfo"
+              "name": "orderInfo",
+              "bare": true
             }
           },
           {
@@ -16492,14 +16612,16 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "encryptedPassportElement"
+                "name": "encryptedPassportElement",
+                "bare": true
               }
             }
           },
           {
             "name": "credentials",
             "type": {
-              "name": "encryptedCredentials"
+              "name": "encryptedCredentials",
+              "bare": true
             }
           }
         ],
@@ -17066,7 +17188,8 @@
           {
             "name": "new_caption",
             "type": {
-              "name": "formattedText"
+              "name": "formattedText",
+              "bare": true
             }
           }
         ],
@@ -17102,7 +17225,8 @@
           {
             "name": "text",
             "type": {
-              "name": "formattedText"
+              "name": "formattedText",
+              "bare": true
             }
           },
           {
@@ -17172,7 +17296,8 @@
           {
             "name": "thumbnail",
             "type": {
-              "name": "inputThumbnail"
+              "name": "inputThumbnail",
+              "bare": true
             }
           },
           {
@@ -17210,7 +17335,8 @@
           {
             "name": "caption",
             "type": {
-              "name": "formattedText"
+              "name": "formattedText",
+              "bare": true
             }
           }
         ],
@@ -17264,7 +17390,8 @@
           {
             "name": "album_cover_thumbnail",
             "type": {
-              "name": "inputThumbnail"
+              "name": "inputThumbnail",
+              "bare": true
             }
           },
           {
@@ -17291,7 +17418,8 @@
           {
             "name": "caption",
             "type": {
-              "name": "formattedText"
+              "name": "formattedText",
+              "bare": true
             }
           }
         ],
@@ -17337,7 +17465,8 @@
           {
             "name": "thumbnail",
             "type": {
-              "name": "inputThumbnail"
+              "name": "inputThumbnail",
+              "bare": true
             }
           },
           {
@@ -17349,7 +17478,8 @@
           {
             "name": "caption",
             "type": {
-              "name": "formattedText"
+              "name": "formattedText",
+              "bare": true
             }
           }
         ],
@@ -17407,7 +17537,8 @@
           {
             "name": "thumbnail",
             "type": {
-              "name": "inputThumbnail"
+              "name": "inputThumbnail",
+              "bare": true
             }
           },
           {
@@ -17438,7 +17569,8 @@
           {
             "name": "caption",
             "type": {
-              "name": "formattedText"
+              "name": "formattedText",
+              "bare": true
             }
           },
           {
@@ -17491,7 +17623,8 @@
           {
             "name": "thumbnail",
             "type": {
-              "name": "inputThumbnail"
+              "name": "inputThumbnail",
+              "bare": true
             }
           },
           {
@@ -17571,7 +17704,8 @@
           {
             "name": "thumbnail",
             "type": {
-              "name": "inputThumbnail"
+              "name": "inputThumbnail",
+              "bare": true
             }
           },
           {
@@ -17615,7 +17749,8 @@
           {
             "name": "caption",
             "type": {
-              "name": "formattedText"
+              "name": "formattedText",
+              "bare": true
             }
           },
           {
@@ -17668,7 +17803,8 @@
           {
             "name": "thumbnail",
             "type": {
-              "name": "inputThumbnail"
+              "name": "inputThumbnail",
+              "bare": true
             }
           },
           {
@@ -17742,7 +17878,8 @@
           {
             "name": "caption",
             "type": {
-              "name": "formattedText"
+              "name": "formattedText",
+              "bare": true
             }
           }
         ],
@@ -18236,7 +18373,8 @@
           {
             "name": "copy_options",
             "type": {
-              "name": "messageCopyOptions"
+              "name": "messageCopyOptions",
+              "bare": true
             }
           }
         ],
@@ -19327,7 +19465,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "stickerSetInfo"
+                "name": "stickerSetInfo",
+                "bare": true
               }
             }
           }
@@ -19775,7 +19914,8 @@
           {
             "name": "protocol",
             "type": {
-              "name": "callProtocol"
+              "name": "callProtocol",
+              "bare": true
             }
           },
           {
@@ -19784,7 +19924,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "callServer"
+                "name": "callServer",
+                "bare": true
               }
             }
           },
@@ -22289,7 +22430,8 @@
           {
             "name": "voice_note",
             "type": {
-              "name": "voiceNote"
+              "name": "voiceNote",
+              "bare": true
             }
           },
           {
@@ -22631,7 +22773,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "gameHighScore"
+                "name": "gameHighScore",
+                "bare": true
               }
             }
           }
@@ -23029,13 +23172,15 @@
           {
             "name": "old_permissions",
             "type": {
-              "name": "chatPermissions"
+              "name": "chatPermissions",
+              "bare": true
             }
           },
           {
             "name": "new_permissions",
             "type": {
-              "name": "chatPermissions"
+              "name": "chatPermissions",
+              "bare": true
             }
           }
         ],
@@ -23147,13 +23292,15 @@
           {
             "name": "old_photo",
             "type": {
-              "name": "chatPhoto"
+              "name": "chatPhoto",
+              "bare": true
             }
           },
           {
             "name": "new_photo",
             "type": {
-              "name": "chatPhoto"
+              "name": "chatPhoto",
+              "bare": true
             }
           }
         ],
@@ -23361,13 +23508,15 @@
           {
             "name": "old_location",
             "type": {
-              "name": "chatLocation"
+              "name": "chatLocation",
+              "bare": true
             }
           },
           {
             "name": "new_location",
             "type": {
-              "name": "chatLocation"
+              "name": "chatLocation",
+              "bare": true
             }
           }
         ],
@@ -23487,7 +23636,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "chatEvent"
+                "name": "chatEvent",
+                "bare": true
               }
             }
           }
@@ -23805,7 +23955,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "languagePackString"
+                "name": "languagePackString",
+                "bare": true
               }
             }
           }
@@ -23994,7 +24145,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "languagePackInfo"
+                "name": "languagePackInfo",
+                "bare": true
               }
             }
           }
@@ -25657,7 +25809,8 @@
           {
             "name": "video_note",
             "type": {
-              "name": "videoNote"
+              "name": "videoNote",
+              "bare": true
             }
           },
           {
@@ -25695,7 +25848,8 @@
           {
             "name": "voice_note",
             "type": {
-              "name": "voiceNote"
+              "name": "voiceNote",
+              "bare": true
             }
           },
           {
@@ -26624,7 +26778,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "jsonObjectMember"
+                "name": "jsonObjectMember",
+                "bare": true
               }
             }
           }
@@ -27371,7 +27526,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "connectedWebsite"
+                "name": "connectedWebsite",
+                "bare": true
               }
             }
           }
@@ -28005,7 +28161,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "storageStatisticsByFileType"
+                "name": "storageStatisticsByFileType",
+                "bare": true
               }
             }
           }
@@ -28059,7 +28216,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "storageStatisticsByChat"
+                "name": "storageStatisticsByChat",
+                "bare": true
               }
             }
           }
@@ -28544,19 +28702,22 @@
           {
             "name": "low",
             "type": {
-              "name": "autoDownloadSettings"
+              "name": "autoDownloadSettings",
+              "bare": true
             }
           },
           {
             "name": "medium",
             "type": {
-              "name": "autoDownloadSettings"
+              "name": "autoDownloadSettings",
+              "bare": true
             }
           },
           {
             "name": "high",
             "type": {
-              "name": "autoDownloadSettings"
+              "name": "autoDownloadSettings",
+              "bare": true
             }
           }
         ],
@@ -28834,7 +28995,8 @@
           {
             "name": "info",
             "type": {
-              "name": "chatInviteLinkInfo"
+              "name": "chatInviteLinkInfo",
+              "bare": true
             }
           }
         ],
@@ -28933,7 +29095,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "tMeUrl"
+                "name": "tMeUrl",
+                "bare": true
               }
             }
           }
@@ -29085,7 +29248,8 @@
           {
             "name": "text",
             "type": {
-              "name": "formattedText"
+              "name": "formattedText",
+              "bare": true
             }
           },
           {
@@ -29419,7 +29583,8 @@
           {
             "name": "mask_position",
             "type": {
-              "name": "maskPosition"
+              "name": "maskPosition",
+              "bare": true
             }
           }
         ],
@@ -29939,31 +30104,36 @@
           {
             "name": "period",
             "type": {
-              "name": "dateRange"
+              "name": "dateRange",
+              "bare": true
             }
           },
           {
             "name": "member_count",
             "type": {
-              "name": "statisticsValue"
+              "name": "statisticsValue",
+              "bare": true
             }
           },
           {
             "name": "message_count",
             "type": {
-              "name": "statisticsValue"
+              "name": "statisticsValue",
+              "bare": true
             }
           },
           {
             "name": "viewer_count",
             "type": {
-              "name": "statisticsValue"
+              "name": "statisticsValue",
+              "bare": true
             }
           },
           {
             "name": "sender_count",
             "type": {
-              "name": "statisticsValue"
+              "name": "statisticsValue",
+              "bare": true
             }
           },
           {
@@ -30020,7 +30190,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "chatStatisticsMessageSenderInfo"
+                "name": "chatStatisticsMessageSenderInfo",
+                "bare": true
               }
             }
           },
@@ -30030,7 +30201,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "chatStatisticsAdministratorActionsInfo"
+                "name": "chatStatisticsAdministratorActionsInfo",
+                "bare": true
               }
             }
           },
@@ -30040,7 +30212,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "chatStatisticsInviterInfo"
+                "name": "chatStatisticsInviterInfo",
+                "bare": true
               }
             }
           }
@@ -30125,25 +30298,29 @@
           {
             "name": "period",
             "type": {
-              "name": "dateRange"
+              "name": "dateRange",
+              "bare": true
             }
           },
           {
             "name": "member_count",
             "type": {
-              "name": "statisticsValue"
+              "name": "statisticsValue",
+              "bare": true
             }
           },
           {
             "name": "mean_view_count",
             "type": {
-              "name": "statisticsValue"
+              "name": "statisticsValue",
+              "bare": true
             }
           },
           {
             "name": "mean_share_count",
             "type": {
-              "name": "statisticsValue"
+              "name": "statisticsValue",
+              "bare": true
             }
           },
           {
@@ -30213,7 +30390,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "chatStatisticsMessageInteractionInfo"
+                "name": "chatStatisticsMessageInteractionInfo",
+                "bare": true
               }
             }
           }
@@ -30652,7 +30830,8 @@
           {
             "name": "interaction_info",
             "type": {
-              "name": "messageInteractionInfo"
+              "name": "messageInteractionInfo",
+              "bare": true
             }
           }
         ],
@@ -30891,7 +31070,8 @@
           {
             "name": "photo",
             "type": {
-              "name": "chatPhotoInfo"
+              "name": "chatPhotoInfo",
+              "bare": true
             }
           }
         ],
@@ -30930,7 +31110,8 @@
           {
             "name": "permissions",
             "type": {
-              "name": "chatPermissions"
+              "name": "chatPermissions",
+              "bare": true
             }
           }
         ],
@@ -30983,7 +31164,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "chatPosition"
+                "name": "chatPosition",
+                "bare": true
               }
             }
           }
@@ -31023,7 +31205,8 @@
           {
             "name": "position",
             "type": {
-              "name": "chatPosition"
+              "name": "chatPosition",
+              "bare": true
             }
           }
         ],
@@ -31349,7 +31532,8 @@
           {
             "name": "notification_settings",
             "type": {
-              "name": "chatNotificationSettings"
+              "name": "chatNotificationSettings",
+              "bare": true
             }
           }
         ],
@@ -31387,7 +31571,8 @@
           {
             "name": "notification_settings",
             "type": {
-              "name": "scopeNotificationSettings"
+              "name": "scopeNotificationSettings",
+              "bare": true
             }
           }
         ],
@@ -31509,7 +31694,8 @@
           {
             "name": "draft_message",
             "type": {
-              "name": "draftMessage"
+              "name": "draftMessage",
+              "bare": true
             }
           },
           {
@@ -31518,7 +31704,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "chatPosition"
+                "name": "chatPosition",
+                "bare": true
               }
             }
           }
@@ -31550,7 +31737,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "chatFilterInfo"
+                "name": "chatFilterInfo",
+                "bare": true
               }
             }
           }
@@ -31774,7 +31962,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "notificationGroup"
+                "name": "notificationGroup",
+                "bare": true
               }
             }
           }
@@ -32034,7 +32223,8 @@
           {
             "name": "basic_group",
             "type": {
-              "name": "basicGroup"
+              "name": "basicGroup",
+              "bare": true
             }
           }
         ],
@@ -32091,7 +32281,8 @@
           {
             "name": "secret_chat",
             "type": {
-              "name": "secretChat"
+              "name": "secretChat",
+              "bare": true
             }
           }
         ],
@@ -32130,7 +32321,8 @@
           {
             "name": "user_full_info",
             "type": {
-              "name": "userFullInfo"
+              "name": "userFullInfo",
+              "bare": true
             }
           }
         ],
@@ -32169,7 +32361,8 @@
           {
             "name": "basic_group_full_info",
             "type": {
-              "name": "basicGroupFullInfo"
+              "name": "basicGroupFullInfo",
+              "bare": true
             }
           }
         ],
@@ -32208,7 +32401,8 @@
           {
             "name": "supergroup_full_info",
             "type": {
-              "name": "supergroupFullInfo"
+              "name": "supergroupFullInfo",
+              "bare": true
             }
           }
         ],
@@ -32474,7 +32668,8 @@
           {
             "name": "rules",
             "type": {
-              "name": "userPrivacySettingRules"
+              "name": "userPrivacySettingRules",
+              "bare": true
             }
           }
         ],
@@ -32674,7 +32869,8 @@
           {
             "name": "sticker_set",
             "type": {
-              "name": "stickerSet"
+              "name": "stickerSet",
+              "bare": true
             }
           }
         ],
@@ -32745,7 +32941,8 @@
           {
             "name": "sticker_sets",
             "type": {
-              "name": "stickerSets"
+              "name": "stickerSets",
+              "bare": true
             }
           }
         ],
@@ -32946,7 +33143,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "languagePackString"
+                "name": "languagePackString",
+                "bare": true
               }
             }
           }
@@ -33014,7 +33212,8 @@
           {
             "name": "terms_of_service",
             "type": {
-              "name": "termsOfService"
+              "name": "termsOfService",
+              "bare": true
             }
           }
         ],
@@ -33045,7 +33244,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "chatNearby"
+                "name": "chatNearby",
+                "bare": true
               }
             }
           }
@@ -33626,7 +33826,8 @@
           {
             "name": "order_info",
             "type": {
-              "name": "orderInfo"
+              "name": "orderInfo",
+              "bare": true
             }
           }
         ],
@@ -34117,7 +34318,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "testInt"
+                "name": "testInt",
+                "bare": true
               }
             }
           }
@@ -34182,7 +34384,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "testString"
+                "name": "testString",
+                "bare": true
               }
             }
           }
@@ -34227,7 +34430,8 @@
           {
             "name": "parameters",
             "type": {
-              "name": "tdlibParameters"
+              "name": "tdlibParameters",
+              "bare": true
             }
           }
         ],
@@ -34295,7 +34499,8 @@
           {
             "name": "settings",
             "type": {
-              "name": "phoneNumberAuthenticationSettings"
+              "name": "phoneNumberAuthenticationSettings",
+              "bare": true
             }
           }
         ],
@@ -37151,7 +37356,8 @@
           {
             "name": "options",
             "type": {
-              "name": "messageSendOptions"
+              "name": "messageSendOptions",
+              "bare": true
             }
           },
           {
@@ -37228,7 +37434,8 @@
           {
             "name": "options",
             "type": {
-              "name": "messageSendOptions"
+              "name": "messageSendOptions",
+              "bare": true
             }
           },
           {
@@ -37362,7 +37569,8 @@
           {
             "name": "options",
             "type": {
-              "name": "messageSendOptions"
+              "name": "messageSendOptions",
+              "bare": true
             }
           },
           {
@@ -37455,7 +37663,8 @@
           {
             "name": "options",
             "type": {
-              "name": "messageSendOptions"
+              "name": "messageSendOptions",
+              "bare": true
             }
           },
           {
@@ -38007,7 +38216,8 @@
           {
             "name": "caption",
             "type": {
-              "name": "formattedText"
+              "name": "formattedText",
+              "bare": true
             }
           }
         ],
@@ -38276,7 +38486,8 @@
           {
             "name": "caption",
             "type": {
-              "name": "formattedText"
+              "name": "formattedText",
+              "bare": true
             }
           }
         ],
@@ -38461,7 +38672,8 @@
           {
             "name": "text",
             "type": {
-              "name": "formattedText"
+              "name": "formattedText",
+              "bare": true
             }
           }
         ],
@@ -38489,7 +38701,8 @@
           {
             "name": "text",
             "type": {
-              "name": "formattedText"
+              "name": "formattedText",
+              "bare": true
             }
           }
         ],
@@ -39351,7 +39564,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "shippingOption"
+                "name": "shippingOption",
+                "bare": true
               }
             }
           },
@@ -40175,7 +40389,8 @@
           {
             "name": "location",
             "type": {
-              "name": "chatLocation"
+              "name": "chatLocation",
+              "bare": true
             }
           }
         ],
@@ -40358,7 +40573,8 @@
           {
             "name": "filter",
             "type": {
-              "name": "chatFilter"
+              "name": "chatFilter",
+              "bare": true
             }
           }
         ],
@@ -40397,7 +40613,8 @@
           {
             "name": "filter",
             "type": {
-              "name": "chatFilter"
+              "name": "chatFilter",
+              "bare": true
             }
           }
         ],
@@ -40503,7 +40720,8 @@
           {
             "name": "filter",
             "type": {
-              "name": "chatFilter"
+              "name": "chatFilter",
+              "bare": true
             }
           }
         ],
@@ -40621,7 +40839,8 @@
           {
             "name": "permissions",
             "type": {
-              "name": "chatPermissions"
+              "name": "chatPermissions",
+              "bare": true
             }
           }
         ],
@@ -40671,7 +40890,8 @@
           {
             "name": "draft_message",
             "type": {
-              "name": "draftMessage"
+              "name": "draftMessage",
+              "bare": true
             }
           }
         ],
@@ -40710,7 +40930,8 @@
           {
             "name": "notification_settings",
             "type": {
-              "name": "chatNotificationSettings"
+              "name": "chatNotificationSettings",
+              "bare": true
             }
           }
         ],
@@ -40947,7 +41168,8 @@
           {
             "name": "location",
             "type": {
-              "name": "chatLocation"
+              "name": "chatLocation",
+              "bare": true
             }
           }
         ],
@@ -41648,7 +41870,8 @@
           {
             "name": "notification_settings",
             "type": {
-              "name": "scopeNotificationSettings"
+              "name": "scopeNotificationSettings",
+              "bare": true
             }
           }
         ],
@@ -42337,7 +42560,8 @@
           {
             "name": "protocol",
             "type": {
-              "name": "callProtocol"
+              "name": "callProtocol",
+              "bare": true
             }
           },
           {
@@ -42382,7 +42606,8 @@
           {
             "name": "protocol",
             "type": {
-              "name": "callProtocol"
+              "name": "callProtocol",
+              "bare": true
             }
           }
         ],
@@ -44026,7 +44251,8 @@
           {
             "name": "text",
             "type": {
-              "name": "formattedText"
+              "name": "formattedText",
+              "bare": true
             }
           }
         ],
@@ -44288,7 +44514,8 @@
           {
             "name": "settings",
             "type": {
-              "name": "phoneNumberAuthenticationSettings"
+              "name": "phoneNumberAuthenticationSettings",
+              "bare": true
             }
           }
         ],
@@ -44364,7 +44591,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "botCommand"
+                "name": "botCommand",
+                "bare": true
               }
             }
           }
@@ -44895,7 +45123,8 @@
           {
             "name": "filters",
             "type": {
-              "name": "chatEventLogFilters"
+              "name": "chatEventLogFilters",
+              "bare": true
             }
           },
           {
@@ -45000,7 +45229,8 @@
           {
             "name": "order_info",
             "type": {
-              "name": "orderInfo"
+              "name": "orderInfo",
+              "bare": true
             }
           },
           {
@@ -45562,7 +45792,8 @@
           {
             "name": "info",
             "type": {
-              "name": "languagePackInfo"
+              "name": "languagePackInfo",
+              "bare": true
             }
           },
           {
@@ -45571,7 +45802,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "languagePackString"
+                "name": "languagePackString",
+                "bare": true
               }
             }
           }
@@ -45600,7 +45832,8 @@
           {
             "name": "info",
             "type": {
-              "name": "languagePackInfo"
+              "name": "languagePackInfo",
+              "bare": true
             }
           }
         ],
@@ -45639,7 +45872,8 @@
           {
             "name": "new_string",
             "type": {
-              "name": "languagePackString"
+              "name": "languagePackString",
+              "bare": true
             }
           }
         ],
@@ -45836,7 +46070,8 @@
           {
             "name": "rules",
             "type": {
-              "name": "userPrivacySettingRules"
+              "name": "userPrivacySettingRules",
+              "bare": true
             }
           }
         ],
@@ -45960,7 +46195,8 @@
           {
             "name": "ttl",
             "type": {
-              "name": "accountTtl"
+              "name": "accountTtl",
+              "bare": true
             }
           }
         ],
@@ -46610,7 +46846,8 @@
           {
             "name": "settings",
             "type": {
-              "name": "autoDownloadSettings"
+              "name": "autoDownloadSettings",
+              "bare": true
             }
           },
           {
@@ -46822,7 +47059,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "inputPassportElementError"
+                "name": "inputPassportElementError",
+                "bare": true
               }
             }
           }
@@ -46891,7 +47129,8 @@
           {
             "name": "settings",
             "type": {
-              "name": "phoneNumberAuthenticationSettings"
+              "name": "phoneNumberAuthenticationSettings",
+              "bare": true
             }
           }
         ],
@@ -47205,7 +47444,8 @@
           {
             "name": "settings",
             "type": {
-              "name": "phoneNumberAuthenticationSettings"
+              "name": "phoneNumberAuthenticationSettings",
+              "bare": true
             }
           }
         ],
@@ -48596,7 +48836,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "testInt"
+                "name": "testInt",
+                "bare": true
               }
             }
           }
@@ -48661,7 +48902,8 @@
               "name": "vector",
               "bare": true,
               "generic_arg": {
-                "name": "testString"
+                "name": "testString",
+                "bare": true
               }
             }
           }

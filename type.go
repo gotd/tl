@@ -74,8 +74,10 @@ func (p *Type) Parse(s string) error {
 		}
 	}
 
-	// Bare types are always lowercase.
-	p.Bare = p.Name == strings.ToLower(p.Name)
+	// Bare types starts from lowercase.
+	if len(p.Name) > 0 {
+		p.Bare = p.Name[0:1] == strings.ToLower(p.Name[0:1])
+	}
 	return nil
 }
 

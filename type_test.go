@@ -20,6 +20,10 @@ func TestParameterType(t *testing.T) {
 			String: "foo",
 		},
 		{
+			Type:   Type{Name: "fooBar", Bare: true},
+			String: "fooBar",
+		},
+		{
 			Type:   Type{Name: "baz", Bare: true, Namespace: []string{"foo", "bar"}},
 			String: "foo.bar.baz",
 		},
