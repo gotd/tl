@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ernado/tl"
+	"github.com/gotd/tl"
 )
 
 func main() {

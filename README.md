@@ -1,14 +1,14 @@
 # tl
 
-[![PkgGoDev](https://pkg.go.dev/badge/github.com/ernado/tl)](https://pkg.go.dev/github.com/ernado/tl)
+[![PkgGoDev](https://pkg.go.dev/badge/github.com/gotd/tl)](https://pkg.go.dev/github.com/gotd/tl)
 
 Package tl implements [TL](https://core.telegram.org/mtproto/TL) (Type Language) schema parser and writer.
 Inspired by [grammers](https://github.com/Lonami/grammers) parser.
 
-Used in [gotd.dev/td](https://github.com/gotdlib/td) in code generation tool.
+Used in [gotd.dev/td](https://github.com/gotd/td) in code generation tool.
 
 ```console
-go get github.com/ernado/tl
+go get github.com/gotd/tl
 ```
 
 ## Parsing
@@ -23,7 +23,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ernado/tl"
+	"github.com/gotd/tl"
 )
 
 func main() {
@@ -40,7 +40,7 @@ func main() {
 You can use it like that:
 ```console
 $ curl -s "https://raw.githubusercontent.com/tdlib/td/master/td/generate/scheme/td_api.tl" \
-    | go run github.com/ernado/tl/cmd/tl-print \
+    | go run github.com/gotd/tl/cmd/tl-print \
     | less
 ```
 
@@ -72,7 +72,7 @@ package main
 import (
 	"os"
 
-	"github.com/ernado/tl"
+	"github.com/gotd/tl"
 )
 
 func main() {

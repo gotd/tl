@@ -1,4 +1,4 @@
-module github.com/ernado/tl
+module github.com/gotd/tl
 
 go 1.15
 

@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/ernado/tl"
+	"github.com/gotd/tl"
 )
 
 func main() {
