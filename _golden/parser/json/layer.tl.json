@@ -1,0 +1,27 @@
+{
+  "layer": 122,
+  "definitions": [
+    {
+      "definition": {
+        "name": "msgs_ack",
+        "id": 1658238041,
+        "params": [
+          {
+            "name": "msg_ids",
+            "type": {
+              "name": "Vector",
+              "generic_arg": {
+                "name": "long",
+                "bare": true
+              }
+            }
+          }
+        ],
+        "type": {
+          "name": "MsgsAck"
+        }
+      },
+      "category": "type"
+    }
+  ]
+}

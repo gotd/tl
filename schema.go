@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"io"
+	"strconv"
 	"strings"
 )
 
@@ -25,6 +26,7 @@ type Class struct {
 // Schema represents single TL file with information about definitions and
 // so called "Classes" aka non-bare types with one or multiple constructors.
 type Schema struct {
+	Layer       int                `json:"layer,omitempty"`
 	Definitions []SchemaDefinition `json:"definitions"`
 	Classes     []Class            `json:"classes,omitempty"`
 }
@@ -75,6 +77,10 @@ func (s Schema) WriteTo(w io.Writer) (int64, error) {
 		b.WriteString(";\n\n")
 	}
 
+	if s.Layer != 0 {
+		b.WriteString(fmt.Sprintf("// LAYER %d\n", s.Layer))
+	}
+
 	n, err := w.Write([]byte(b.String()))
 	return int64(n), err
 }
@@ -114,6 +120,14 @@ func Parse(reader io.Reader) (*Schema, error) {
 		case vectorDefinition, vectorDefinitionWithID:
 			// Special case for vector.
 			continue
+		}
+		if strings.HasPrefix(s, tokLayer) {
+			// Layer version annotation.
+			layer, err := strconv.Atoi(strings.TrimPrefix(s, tokLayer))
+			if err != nil {
+				return nil, fmt.Errorf("failed to parse layer: %w", err)
+			}
+			schema.Layer = layer
 		}
 		if strings.HasPrefix(s, "//@") {
 			// Found annotation.

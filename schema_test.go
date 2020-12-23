@@ -57,6 +57,7 @@ func TestParser(t *testing.T) {
 		"td_api.tl",
 		"telegram_api.tl",
 		"telegram_api_header.tl",
+		"layer.tl",
 	} {
 		t.Run(v, func(t *testing.T) {
 			data, err := ioutil.ReadFile(filepath.Join("_testdata", v))
@@ -85,7 +86,7 @@ func TestParser(t *testing.T) {
 					goldie.WithDiffEngine(goldie.ColoredDiff),
 					goldie.WithNameSuffix(".tl"),
 				)
-				g.Assert(t, v, b.Bytes())
+				g.Assert(t, strings.TrimSuffix(v, ".tl"), b.Bytes())
 
 				parsedSchema, err := Parse(b)
 				if err != nil {
