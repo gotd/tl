@@ -33,7 +33,7 @@ func TestParserBase(t *testing.T) {
 }
 
 func TestParserError(t *testing.T) {
-	data, err := ioutil.ReadFile("_testdata/Error.tl")
+	data, err := ioutil.ReadFile(filepath.Join("_testdata", "Error.tl"))
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -70,7 +70,7 @@ func TestParser(t *testing.T) {
 			}
 			t.Run("JSON", func(t *testing.T) {
 				g := goldie.New(t,
-					goldie.WithFixtureDir("_golden/parser/json"),
+					goldie.WithFixtureDir(filepath.Join("_golden", "parser", "json")),
 					goldie.WithDiffEngine(goldie.ColoredDiff),
 					goldie.WithNameSuffix(".json"),
 				)
@@ -82,7 +82,7 @@ func TestParser(t *testing.T) {
 					t.Fatal(err)
 				}
 				g := goldie.New(t,
-					goldie.WithFixtureDir("_golden/parser/tl"),
+					goldie.WithFixtureDir(filepath.Join("_golden", "parser", "tl")),
 					goldie.WithDiffEngine(goldie.ColoredDiff),
 					goldie.WithNameSuffix(".tl"),
 				)
@@ -196,7 +196,7 @@ func TestParserStrict(t *testing.T) {
 					t.Fatal(err)
 				}
 				g := goldie.New(t,
-					goldie.WithFixtureDir("_golden/parser_strict/tl"),
+					goldie.WithFixtureDir(filepath.Join("_golden", "parser_strict", "tl")),
 					goldie.WithDiffEngine(goldie.ColoredDiff),
 					goldie.WithNameSuffix(".tl"),
 				)
