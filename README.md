@@ -5,7 +5,7 @@
 Package tl implements [TL](https://core.telegram.org/mtproto/TL) (Type Language) schema parser and writer.
 Inspired by [grammers](https://github.com/Lonami/grammers) parser.
 
-Used in [gotd/td](https://github.com/gotd/td) in code generation tool.
+Used by [gotd/td](https://github.com/gotd/td) in code generation pipeline.
 
 ```console
 go get github.com/gotd/tl
