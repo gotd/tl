@@ -40,6 +40,19 @@ func TestParameterType(t *testing.T) {
 		},
 		{
 			Type: Type{
+				Name: "vector",
+				GenericArg: &Type{
+					Name:      "T",
+					Bare:      true,
+					Percent:   true,
+					Namespace: []string{"generic"},
+				},
+				Bare: true,
+			},
+			String: "vector<%generic.T>",
+		},
+		{
+			Type: Type{
 				Name:       "X",
 				Namespace:  []string{"foo"},
 				GenericRef: true,
@@ -49,9 +62,7 @@ func TestParameterType(t *testing.T) {
 	} {
 		t.Run(tt.String, func(t *testing.T) {
 			t.Run("String", func(t *testing.T) {
-				if v := tt.Type.String(); v != tt.String {
-					t.Errorf("(%s).String = %s", tt.String, v)
-				}
+				require.Equal(t, tt.String, tt.Type.String())
 			})
 			t.Run("Parse", func(t *testing.T) {
 				var result Type
