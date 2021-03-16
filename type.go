@@ -11,33 +11,45 @@ type Type struct {
 	Namespace  []string `json:"namespace,omitempty"`   // namespace components of the type
 	Name       string   `json:"name,omitempty"`        // the name of the type
 	Bare       bool     `json:"bare,omitempty"`        // whether this type is bare or boxed
+	Percent    bool     `json:"-"`                     // whether this type has percent in name (like %Message)
 	GenericRef bool     `json:"generic_ref,omitempty"` // whether the type name refers to a generic definition
 	GenericArg *Type    `json:"generic_arg,omitempty"` // generic arguments of the type
 }
 
 func (p Type) String() string {
 	var b strings.Builder
+	if p.Percent {
+		b.WriteByte('%')
+	}
 	if p.GenericRef {
-		b.WriteRune('!')
+		b.WriteByte('!')
 	}
 	for _, ns := range p.Namespace {
 		b.WriteString(ns)
-		b.WriteRune('.')
+		b.WriteByte('.')
 	}
 	b.WriteString(p.Name)
 	if p.GenericArg != nil {
-		b.WriteRune('<')
+		b.WriteByte('<')
 		b.WriteString(p.GenericArg.String())
-		b.WriteRune('>')
+		b.WriteByte('>')
 	}
 	return b.String()
 }
 
 func (p *Type) Parse(s string) error {
-	if strings.HasPrefix(s, ".") {
-		return errors.New("type can't start with dot")
+	if len(s) < 1 {
+		return errors.New("got empty string")
 	}
-	if strings.HasPrefix(s, "!") {
+
+	switch s[0] {
+	case '.':
+		return errors.New("type can't start with dot")
+	case '%':
+		p.Bare = true
+		p.Percent = true
+		s = s[1:]
+	case '!':
 		p.GenericRef = true
 		s = s[1:]
 	}
@@ -75,7 +87,7 @@ func (p *Type) Parse(s string) error {
 	}
 
 	// Bare types starts from lowercase.
-	if len(p.Name) > 0 {
+	if len(p.Name) > 0 && !p.Percent {
 		p.Bare = p.Name[0:1] == strings.ToLower(p.Name[0:1])
 	}
 	return nil
