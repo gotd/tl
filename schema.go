@@ -24,7 +24,7 @@ type Class struct {
 }
 
 // Schema represents single TL file with information about definitions and
-// so called "Classes" aka non-bare types with one or multiple constructors.
+// so-called "Classes" aka non-bare types with one or multiple constructors.
 type Schema struct {
 	Layer       int                `json:"layer,omitempty"`
 	Definitions []SchemaDefinition `json:"definitions"`
