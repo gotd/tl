@@ -2,7 +2,6 @@ package tl
 
 import (
 	"bytes"
-	"io/ioutil"
 	"os"
 	"path/filepath"
 	"strings"
@@ -61,7 +60,7 @@ func TestParser(t *testing.T) {
 		"layer.tl",
 	} {
 		t.Run(v, func(t *testing.T) {
-			data, err := ioutil.ReadFile(filepath.Join("_testdata", v))
+			data, err := os.ReadFile(filepath.Join("_testdata", v))
 			if err != nil {
 				t.Fatal(err)
 			}
@@ -173,7 +172,7 @@ func TestParserStrict(t *testing.T) {
 		},
 	} {
 		t.Run(tt.File, func(t *testing.T) {
-			data, err := ioutil.ReadFile(filepath.Join("_testdata", tt.File))
+			data, err := os.ReadFile(filepath.Join("_testdata", tt.File))
 			if err != nil {
 				t.Fatal(err)
 			}
