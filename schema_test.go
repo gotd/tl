@@ -3,6 +3,7 @@ package tl
 import (
 	"bytes"
 	"io/ioutil"
+	"os"
 	"path/filepath"
 	"strings"
 	"testing"
@@ -13,7 +14,7 @@ import (
 )
 
 func TestParserBase(t *testing.T) {
-	data, err := ioutil.ReadFile("_testdata/base.tl")
+	data, err := os.ReadFile("_testdata/base.tl")
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -33,7 +34,7 @@ func TestParserBase(t *testing.T) {
 }
 
 func TestParserError(t *testing.T) {
-	data, err := ioutil.ReadFile(filepath.Join("_testdata", "Error.tl"))
+	data, err := os.ReadFile(filepath.Join("_testdata", "Error.tl"))
 	if err != nil {
 		t.Fatal(err)
 	}

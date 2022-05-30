@@ -5,7 +5,6 @@ import (
 	"bytes"
 	"crypto/md5" // #nosec
 	"fmt"
-	"io/ioutil"
 	"os"
 	"path/filepath"
 	"strings"
@@ -19,7 +18,7 @@ func main() {
 		if info.IsDir() {
 			return nil
 		}
-		data, readErr := ioutil.ReadFile(path)
+		data, readErr := os.ReadFile(path)
 		if readErr != nil {
 			return readErr
 		}
@@ -33,7 +32,7 @@ func main() {
 			crc := md5.Sum(s.Bytes()) // #nosec G401
 			targetName := fmt.Sprintf("testdata-%x", crc)
 			targetPath := filepath.Join("_fuzz", "definitions", "corpus", targetName)
-			if err := ioutil.WriteFile(targetPath, []byte(strings.TrimSuffix(text, ";")), 0600); err != nil {
+			if err := os.WriteFile(targetPath, []byte(strings.TrimSuffix(text, ";")), 0600); err != nil {
 				return err
 			}
 		}
