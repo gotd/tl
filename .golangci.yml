@@ -35,7 +35,6 @@ linters-settings:
 linters:
   disable-all: true
   enable:
-    - deadcode
     - dogsled
     - dupl
     - errcheck
@@ -45,7 +44,6 @@ linters:
     - gocyclo
     - gofmt
     - goimports
-    - golint
     - gosec
     - gosimple
     - govet
@@ -53,15 +51,12 @@ linters:
     - lll
     - misspell
     - nakedret
-    - scopelint
     - staticcheck
-    - structcheck
     - stylecheck
     - typecheck
     - unconvert
     - unparam
     - unused
-    - varcheck
     - whitespace
     - gochecknoglobals
     - gocognit
