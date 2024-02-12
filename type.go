@@ -87,7 +87,7 @@ func (p *Type) Parse(s string) error {
 	}
 
 	// Bare types starts from lowercase.
-	if len(p.Name) > 0 && !p.Percent {
+	if p.Name != "" && !p.Percent {
 		p.Bare = p.Name[0:1] == strings.ToLower(p.Name[0:1])
 	}
 	return nil
