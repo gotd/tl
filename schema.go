@@ -78,7 +78,7 @@ func (s Schema) WriteTo(w io.Writer) (int64, error) {
 	}
 
 	if s.Layer != 0 {
-		b.WriteString(fmt.Sprintf("// LAYER %d\n", s.Layer))
+		_, _ = fmt.Fprintf(&b, "// LAYER %d\n", s.Layer)
 	}
 
 	n, err := w.Write([]byte(b.String()))

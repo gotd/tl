@@ -28,7 +28,7 @@ func (d Definition) String() string {
 		b.WriteString(ns)
 		b.WriteRune('.')
 	}
-	b.WriteString(fmt.Sprintf("%s#%x", d.Name, d.ID))
+	_, _ = fmt.Fprintf(&b, "%s#%x", d.Name, d.ID)
 	for _, param := range d.GenericParams {
 		b.WriteString(" {")
 		b.WriteString(param)
